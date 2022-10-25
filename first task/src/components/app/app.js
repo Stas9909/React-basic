@@ -9,9 +9,11 @@ import "./app.css";
 function App() {
 
     const data = [//массив данных, кот приходит с сервера
-        {name: "John C.", salary: 800, increase: false},
-        {name: "Alex M.", salary: 3000, increase: true},
-        {name: "Carl W.", salary: 6000, increase: false}
+//increase - класс, кот меняет цвет эл-та, если true
+//id уник идентиф, кот говорит ДОМ дереву, что эл-т тот же и не надо все перерисовывать
+        {name: "John C.", salary: 800, increase: false, id: 1},
+        {name: "Alex M.", salary: 3000, increase: true, id: 2},
+        {name: "Carl W.", salary: 6000, increase: false, id: 3}
     ];
 
     return(

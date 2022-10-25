@@ -15,9 +15,12 @@ import "./employers-list.css";
 const EmployersList = ({data}) => {//массив объектов
 
     const elements = data.map(item => {//рез-тат MAP явл новый [] сформ из callback
+//Здесь мы достаем св-во id из объекта item, а оставш св-ва объедин в св-во itemProps
+        const {id, ...itemProps}=item;
+
         return(
             // <EmployersListItem name={item.name} salary={item.salary}/>
-            <EmployersListItem {...item}/>//Разврнутый объект. То же самое выше
+            <EmployersListItem key={id} {...item}/>//Разврнутый объект. То же самое выше
         )
     })
 
