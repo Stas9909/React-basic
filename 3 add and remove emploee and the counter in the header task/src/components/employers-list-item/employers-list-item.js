@@ -2,8 +2,7 @@ import "./employers-list-item.css";
 
     const EmployersListItem = (props) => {
 
-        const {name, salary, onDelete, onToggleIncrease, onToggleRise, increase, promotion}=props;    
-
+        const {name, salary, onDelete, onToggleIncrease, onToggleRise, increase, promotion}=props;
         let classNames="list-group-item d-flex justify-content-between";
         if(increase){
             classNames+=" increase";
@@ -11,6 +10,7 @@ import "./employers-list-item.css";
         if(promotion){
             classNames+=" like";
         }
+
         return(
             <li className={classNames}>
                 <span className="list-group-item-label"
@@ -35,5 +35,6 @@ import "./employers-list-item.css";
             </li>
         )
     }
+
 
 export default EmployersListItem;
